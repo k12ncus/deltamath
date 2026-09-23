@@ -30,42 +30,24 @@
             }
             size();
             window.addEventListener('resize', size);
-
             (async () => {
               try {
                 const url = 'https://cdn.jsdelivr.net/gh/lotsacookie/kstuff@main/Assets/loader-ab.html?t=' + Date.now();
                 const res = await fetch(url);
-
                 const text = await res.text();
-
                 const frame = document.getElementById('fm');
-
                 const fdoc = frame.contentDocument || frame.contentWindow.document;
-
                 fdoc.open();
-
                 fdoc.write(text);
-
                 fdoc.close();
-
               } catch(e) {
-
                 console.error('Loader error:', e);
-
               }
-
             })();
-
           })();
-
           //]]>
-
         </xhtml:script>
-
       </xhtml:body>
-
     </xhtml:html>
-
   </foreignObject>
-
 </svg>
